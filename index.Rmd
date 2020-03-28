@@ -1,0 +1,150 @@
+---
+title: "Introduction to R"
+subtitle: "BST-680"
+author: "Byron C. Jaeger"
+date: "last updated: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: center, middle
+
+# Me
+
+### the instructor
+
+---
+
+background-image: url(img/run_R_kids.png)
+background-size: 80%
+
+---
+class: inverse, center, middle
+
+# Why R?
+
+---
+
+# Why use R
+
+
+### R is open-source and free to use.
+
+--
+
+### Free resources for learning (including our course content)
+
+--
+
+### Versatile Rmarkdown system (which made these slides)
+
+--
+
+### Interactive shiny applications
+
+--
+
+### Inclusive community
+
+---
+
+class: inverse, center, middle
+
+# What you will learn
+
+---
+
+background-image: url(img/environmental-data-science-r4ds.png)
+background-size: 90%
+
+# Data science 
+
+---
+
+background-image: url(img/ggplot2_masterpiece.png)
+background-size: 90%
+
+---
+
+background-image: url(img/rmarkdown_rockstar.png)
+background-size: 90%
+
+---
+
+background-image: url(img/dplyr_wrangling.png)
+background-size: 90%
+
+---
+
+class: inverse, center, middle
+
+# Course website
+
+---
+
+class: inverse, center, middle
+
+# Feelings
+
+---
+
+background-image: url(img/two_states_programming.png)
+background-size: 65%
+
+---
+
+# On feelings
+
+Learning how to program can be frustrating.
+
+- You might feel like you are a 'bad' programmer.
+
+- You might feel like you can't contribute to a team.
+
+- It's okay to have feelings like this. 
+
+- I have them too. 
+
+---
+
+# Getting help
+
+- This class is designed to challenge you
+
+- Struggling is normal, and is in no way an indication that you don't belong.
+
+- Talk with me if you feel overwhelmed by the coursework.
+
+- Talk with other students (they feel overwhelmed too).
+
+- Post R related problems on our community github repository
+
+- Communicate any non-R related problems to me by e-mail.
+
+- I want to be a safe and helpful resource for you. 
+
+---
+
+background-image: url(img/r_first_then.png)
+background-size: 68%
+
+---
+
+# Next class: Logistics
+
+- Create Rstudio Cloud account
+
+- Create GitHub account (don't need to install git)
+
+- Download + install R/Rstudio
+
+
