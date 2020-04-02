@@ -62,6 +62,12 @@ class: inverse, center, middle
 # Why R?
 
 ---
+layout: true
+background-image: url(img/hex_sticker.png)
+background-position: 95% 2.5%
+background-size: 13%
+
+---
 
 # Why use R
 
@@ -85,7 +91,7 @@ class: inverse, center, middle
 ### Inclusive community
 
 ---
-
+layout: false
 class: inverse, center, middle
 
 # What you will learn
@@ -130,6 +136,12 @@ background-image: url(img/two_states_programming.png)
 background-size: 65%
 
 ---
+layout: true
+background-image: url(img/hex_sticker.png)
+background-position: 95% 2.5%
+background-size: 13%
+
+---
 
 # On feelings
 
@@ -141,7 +153,7 @@ Learning how to program can be frustrating.
 
 - It's okay to have feelings like this. 
 
-- I have them too. 
+- everyone has them. 
 
 ---
 
@@ -162,10 +174,15 @@ Learning how to program can be frustrating.
 - I want to be a safe and helpful resource for you. 
 
 ---
-
+layout: false
 background-image: url(img/r_first_then.png)
 background-size: 68%
 
+---
+layout: true
+background-image: url(img/hex_sticker.png)
+background-position: 95% 2.5%
+background-size: 13%
 ---
 
 # Before next class
