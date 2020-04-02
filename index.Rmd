@@ -2,21 +2,50 @@
 title: "Introduction to R"
 subtitle: "BST-680"
 author: "Byron C. Jaeger"
-date: "last updated: `r Sys.Date()`"
+date: "Last updated: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
+    css: [xaringan-themer.css]
     lib_dir: libs
     nature:
+      beforeInit: "macros.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
+class: center, middle
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
+```{css, echo = FALSE}
+
+.huge { font-size: 200% }
+.large { font-size: 130% }
+.small { font-size: 70% }
+
 ```
 
-class: center, middle
+```{r xaringan-themer, include = FALSE}
+
+library(xaringanthemer)
+library(magrittr)
+
+duo_accent(
+  primary_color = "#006747",
+  secondary_color = "#CFC493", 
+  code_font_family = "Fira Code",
+  code_font_url = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
+)
+
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 12,
+  fig.height = 5.5,
+  dpi = 72 * 5
+)
+
+```
+
 
 # Me
 
@@ -139,12 +168,18 @@ background-size: 68%
 
 ---
 
-# Next class: Logistics
+# Before next class
 
-- Create Rstudio Cloud account
+Your homework is to complete the assigned reading and the logistics tutorial:
 
-- Create GitHub account (don't need to install git)
+- Create Rstudio Cloud account and join the 'Intro to R' group.
 
-- Download + install R/Rstudio
+- Open the project called '00 - getting started'
+
+- Complete the tutorial and send me an e-mail with
+
+    + screenshot showing full bars
+    
+    + responses to questions at end of tutorial.
 
 
