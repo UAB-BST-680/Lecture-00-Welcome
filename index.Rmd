@@ -14,10 +14,6 @@ output:
       countIncrementalSlides: false
 ---
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-```
-
 # What is this course?
 
 Everything you want to know about the course, and everything you will need for the course will be posted at [bst680.rbind.io](http://bst680.rbind.io/)
