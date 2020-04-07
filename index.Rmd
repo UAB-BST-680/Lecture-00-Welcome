@@ -2,201 +2,310 @@
 title: "Introduction to R"
 subtitle: "BST-680"
 author: "Byron C. Jaeger"
-date: "Last updated: `r Sys.Date()`"
+date: "last updated: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: [xaringan-themer.css]
+    css: "slides.css"
+    logo: img/intro_2R_hex.png
     lib_dir: libs
     nature:
-      beforeInit: "macros.js"
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
+
+# What is this course?
+
+Everything you want to know about the course, and everything you will need for the course will be posted at [bst680.rbind.io](http://bst680.rbind.io/)
+
+--
+
+- We will be learning concepts from computer science
+
+--
+
+- We will be using concepts from statistical science
+
+--
+
+- However, this is not a computer or statistical science course.
+
+--
+
+- This course will _introduce_ you to the R programming language and, more broadly, dip your toe into the world of data science.
+
+---
 class: center, middle
 
-```{css, echo = FALSE}
-
-.huge { font-size: 200% }
-.large { font-size: 130% }
-.small { font-size: 70% }
-
-```
-
-```{r xaringan-themer, include = FALSE}
-
-library(xaringanthemer)
-library(magrittr)
-
-duo_accent(
-  primary_color = "#006747",
-  secondary_color = "#CFC493", 
-  code_font_family = "Fira Code",
-  code_font_url = "https://cdn.rawgit.com/tonsky/FiraCode/1.204/distr/fira_code.css"
-)
-
-knitr::opts_chunk$set(
-  echo = TRUE,
-  warning = FALSE,
-  message = FALSE,
-  fig.width = 12,
-  fig.height = 5.5,
-  dpi = 72 * 5
-)
-
-```
-
-
-# Me
-
-### the instructor
+# Your instructor
 
 ---
 
 background-image: url(img/run_R_kids.png)
-background-size: 80%
+background-size: 100%
+
+---
+
+# Who am I?
+
+Byron Casey Jaeger
+
+- I go by Byron or Dr. Jaeger. 
+
+- I am available by e-mail: [bcjaeger@uab.edu](mailto:bcjaeger@uab.edu) 
+
+- I hold office hours after class<sup>1</sup> or by appointment.<sup>2</sup>
+
+- I enjoy margaritas and Rocket League.
+
+- Aside from R, I study machine learning, blood pressure, and cardiovascular disease.
+
+.footnote[<sup>1</sup> I will end office hours early if no one shows up in the first 5 minutes. </br> <sup>2</sup> e-mail me with a list of questions to discuss at least 24 hours before we meet.]
 
 ---
 class: inverse, center, middle
 
-# Why R?
-
----
-layout: true
-background-image: url(img/hex_sticker.png)
-background-position: 95% 2.5%
-background-size: 13%
+# R
 
 ---
 
-# Why use R
-
-
-### R is open-source and free to use.
-
---
-
-### Free resources for learning (including our course content)
-
---
-
-### Versatile Rmarkdown system (which made these slides)
-
---
-
-### Interactive shiny applications
-
---
-
-### Inclusive community
-
----
-layout: false
-class: inverse, center, middle
-
-# What you will learn
+background-image: url(img/R_cars_meme.png)
+background-size: 100%
 
 ---
 
-background-image: url(img/environmental-data-science-r4ds.png)
-background-size: 90%
+# R pros and cons
 
-# Data science 
+.pull-left[
+- R is __open-source__.
 
----
+- R has a great __community__
 
-background-image: url(img/ggplot2_masterpiece.png)
-background-size: 90%
+- R is __versatile__
 
----
-
-background-image: url(img/rmarkdown_rockstar.png)
-background-size: 90%
-
----
-
-background-image: url(img/dplyr_wrangling.png)
-background-size: 90%
-
----
-
-class: inverse, center, middle
-
-# Course website
-
----
-
-class: inverse, center, middle
-
-# Feelings
-
----
-
-background-image: url(img/two_states_programming.png)
-background-size: 65%
-
----
-layout: true
-background-image: url(img/hex_sticker.png)
-background-position: 95% 2.5%
-background-size: 13%
-
----
-
-# On feelings
-
-Learning how to program can be frustrating.
-
-- You might feel like you are a 'bad' programmer.
-
-- You might feel like you can't contribute to a team.
-
-- It's okay to have feelings like this. 
-
-- everyone has them. 
-
----
-
-# Getting help
-
-- This class is designed to challenge you
-
-- Struggling is normal, and is in no way an indication that you don't belong.
-
-- Talk with me if you feel overwhelmed by the coursework.
-
-- Talk with other students (they feel overwhelmed too).
-
-- Post R related problems on our community github repository
-
-- Communicate any non-R related problems to me by e-mail.
-
-- I want to be a safe and helpful resource for you. 
-
----
-layout: false
-background-image: url(img/r_first_then.png)
-background-size: 68%
-
----
-layout: true
-background-image: url(img/hex_sticker.png)
-background-position: 95% 2.5%
-background-size: 13%
----
-
-# Before next class
-
-Your homework is to complete the assigned reading and the logistics tutorial:
-
-- Create Rstudio Cloud account and join the 'Intro to R' group.
-
-- Open the project called '00 - getting started'
-
-- Complete the tutorial and send me an e-mail with
-
-    + screenshot showing full bars
+    + RMarkdown
     
-    + responses to questions at end of tutorial.
+    + Shiny
+    
+    + Rcpp
+    
+    + Reticulate
+    
+    + Statistics
+
+]
+
+--
+
+.pull-right[
+- steep learning curve
+
+- some operations are slow
+
+- type stability
+
+- hard to stay in the loop
+
+]
+
+---
+
+class: center, middle
+
+# Your turn!
+
+---
+
+## Create a GitHub account
+
+Go to https://github.com/, and create an account (unless you already have one). Tips for selecting a username:<sup>1</sup>
+
+- Incorporate your actual name! 
+- Reuse your username from other contexts, e.g., Twitter.
+- Pick a username you will be comfortable sharing w/your boss.
+- Shorter is better than longer.
+- Be as unique as possible in as few characters as possible.
+- Make it timeless. Don’t highlight your current university, employer, or place of residence.
+- Avoid words laden with special meaning in programming, like `NA`.
+
+<font color="#E34132">
+Type 'done' in chat when you finish. Raise your hand if you need help.</br>
+</font>
+
+.footnote[ <sup>1</sup>Source: [Happy git with R](http://happygitwithr.com/github-acct.html#username-advice) by Jenny Bryan.]
+
+---
+
+## Join RStudio.cloud
+
+<font color="#E34132">
+If you haven't already, send me an e-mail to receive an invitation to the Rstudio could space. 
+</font>
+
+---
+class: inverse, center, middle
+
+# Course structure and policies
+
+---
+
+## Class meetings
+
+--
+
+- Interactive
+
+--
+
+- Sometimes I will give a lecture.
+
+--
+
+- Most of the time, we will work through in-class exercises
+
+--
+
+- You will be assigned teams of 3-4 students based on a survey that assesses your programming experience. 
+
+--
+
+- Teams will stay consistent throughout the semester (barring extraordinary circumstances). 
+
+--
+
+- You will work in these teams during class and on the final project.
+
+---
+
+## Diversity & Inclusiveness
+
+The culture of my classroom values diversity as a strength and does not tolerate bullying of any form. 
+
+--
+
+It is my intent to present materials and activities that are respectful of diversity: gender identity, sexuality, disability, age, socioeconomic status, ethnicity, race, nationality, religion, and culture. 
+
+--
+
+If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you. If you prefer to speak with someone outside of the course, your academic dean is an excellent resource. 
+
+--
+
+I am still learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it. Your suggestions are encouraged and appreciated.
+
+---
+background-image: url(img/two_states_programming.png)
+background-position: 50% 60%
+background-size: 75%
+
+## How to get help
+
+---
+
+## How to get help
+
+- Course content, logistics, etc. discussion via GitHub on the [UAB-BST-680/community](https://github.com/UAB-BST-680/community) repository.
+
+    + Note that this is a public discussion forum, which means others outside of the course can stumble upon it and help you as well.
+    
+    + See policies in course website for tips on posting questions.
+
+- For personal and grade related questions, use email.
+
+- Google is always a friend
+
+---
+
+## Academic integrity
+
+You are expected to follow the [UAB School of Public Health Honor Code](https://www.soph.uab.edu/students/honorcode) throughout this course. Additionally,
+
+- unless I explicitly tell you not to use something, you may make use of any online resources (e.g. StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). 
+
+- On individual assignments you may not directly share code with another student in this class, and on team assignments you may not directly share code with another team in this class. 
+
+- You are welcome to discuss the problems together and ask for advice, but you may not send or make use of code from another team or student.
+
+---
+class: inverse, center, middle
+
+# Course components
+
+---
+
+## Readings and Primers:
+
+These are the first place you will go to absorb materials
+
+- All textbooks are free and online
+
+- [Rstudio cloud](https://rstudio.cloud/learn/primers) provides primers (interactive tutorials)
+
+It is essential for you to complete required readings and primer tutorials in order to get the most out of class time. 
+
+
+#### Grading
+
+- Send me proof of primer completion before the specified due date (see Syllabus). 
+
+- A screenshot of your own computer screen showing that you have completed the required primer materials is all you need to send me. 
+
+---
+
+## Learnr tutorials
+
+I have written some interactive tutorials to help you get more practice with certain topics in R. 
+
+- I recommend doing each of these tutorials to get a better and deeper understanding of the basic components of R. 
+
+- The first tutorial is mandatory, all others are worth three points of extra credit.
+
+#### Grading  
+
+- A screenshot of your own computer screen showing that you have completed the tutorial is all you need to send me. 
+
+---
+
+## Homework:
+
+Homework problems
+
+- present you with opportunities to go beyond class material. It is normal to be stuck and it is okay to do your best and still not completely finish the work. 
+
+- build on previous problems, but you can still do problems > x if you are stuck on problem x.
+
+Homework assignments
+
+- will be completed _individually_, but you may discuss the problems with your classmates and team members. 
+
+- are designed to ensure you make an excellent grade if you invest plenty of time and effort into the work. 
+
+One homework assignment with the lowest score will be _dropped._
+
+---
+
+## Overall grade
+
+- Homeworks: 
+    + 6 assignments will be given, 5 count toward your grade.
+    + assignments are 15 points each
+- Final project
+    + 20 points total
+    + 15 points for writeup, 5 for in-class presentation.
+- Class participation
+    + 5 points total
+    + based on participation in lectures and community forum.
+
+Cumulative numerical averages of 90 - 100 are guaranteed at least an A-, 80 - 89 at least a B-, and 70 - 79 at least a C-, however the exact ranges for letter grades will be determined after the final.
+
+---
+
+# Before next class: Logistics
+
+- Join the Rstudio cloud group
+
+- Complete the first tutorial (see syllabus on course site)
+
+- Download + install R/Rstudio
 
 
