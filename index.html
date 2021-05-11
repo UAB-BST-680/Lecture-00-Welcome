@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
   <head>
     <title>Introduction to R</title>
     <meta charset="utf-8" />
@@ -13,7 +13,7 @@ class: center, middle, inverse, title-slide
 # Introduction to R
 ## BST-680
 ### Byron C. Jaeger
-### last updated: 2020-05-12
+### last updated: 2021-05-11
 
 ---
 
@@ -304,7 +304,17 @@ Cumulative numerical averages of 90 - 100 are guaranteed at least an A-, 80 - 89
 
 # Before next class: Logistics
 
-- Join the Rstudio cloud group
+- Send me an e-mail with a .csv attachment, a 'dataset' with 1 row and 5 columns:
+
+    + [`name`] your name.
+    
+    + [`email`] your e-mail address (whatever you'd like to get invited to Rstudio cloud with).
+    
+    + [prog_exp_yrs] number of years with programming experience.
+    
+    + [prog_exp_self] self-rated programming experience (scale of 1-10). A value of 1 means no prior experience at all. A value of 10 means you are fluent in loops, functions, and object oriented programming.
+    
+    + [goal] your primary goal for the semester. 
 
 - Complete the first tutorial (see syllabus on course site)
 
@@ -356,6 +366,32 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -373,17 +409,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {
