@@ -258,8 +258,6 @@ I have written some interactive tutorials to help you get more practice with cer
 
 - I recommend doing each of these tutorials to get a better and deeper understanding of the basic components of R. 
 
-- The first tutorial is mandatory, all others are worth three points of extra credit.
-
 #### Grading  
 
 - A screenshot of your own computer screen showing that you have completed the tutorial is all you need to send me. 
@@ -300,31 +298,25 @@ Cumulative numerical averages of 90 - 100 are guaranteed at least an A-, 80 - 89
 
 # Before next class: Logistics
 
-- Download + install R/Rstudio
+Send me an e-mail with a .csv attachment, a 'dataset' with 1 row and 5 columns:
 
-- Send me an e-mail with a .csv attachment, a 'dataset' with 1 row and 5 columns:
-
-    + [`name`] your name.
+- [`name`] your name.
     
-    + [`email`] your e-mail address (whatever you'd like to get invited to Rstudio cloud with).
+- [`email`] your e-mail address (whatever you'd like to get invited to Rstudio cloud with).
     
-    + [prog_exp_yrs] number of years with programming experience.
+- [`prog_exp_yrs`] number of years with programming experience.
     
-    + [prog_exp_self] self-rated programming experience (scale of 1-10). A value of 1 means no prior experience at all. A value of 10 means you are fluent in loops, functions, and object oriented programming.
+- [`prog_exp_self`] self-rated programming experience (scale of 1-10). A value of 1 means no prior experience at all. A value of 10 means you are fluent in loops, functions, and object oriented programming.
     
-    + [goal] your primary goal for the semester. 1-2 sentences is great!
+- [`goal`] your primary goal for the semester. 1-2 sentences is great!
 
 ---
 
 # Before next class: Logistics
 
-- Download + install R/Rstudio
-
 - Send me an e-mail with a .csv attachment, a 'dataset' with 1 row and 5 columns.
 
-- I'll invite you to Rstudio cloud once I have your .csv file. Then you can...
-
-- Complete the first tutorial (see syllabus on course site)
+- I'll invite you to Rstudio cloud once I have your .csv file.
 
 
 
